@@ -1,2 +1,2 @@
-# ADA-Assignment-C-language-
+# ADA-Assignment-C-language
 Programs written in C.
