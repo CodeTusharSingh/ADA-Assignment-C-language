@@ -5,8 +5,6 @@ int quickSort(int arr[], int left, int right)
     int p = arr[left];
     int l = left + 1;
     int r = right;
-    printf("left -> %d \n", l);
-    printf("right -> %d \n", r);
     while (l <= r)
     {
         if (arr[l] > p)
@@ -21,14 +19,9 @@ int quickSort(int arr[], int left, int right)
             l++;
         }
     }
-    printf("r -> %d \n", r);
-    printf("before swapping pivot -> %d \n", p);
-    printf("before swapping arr[r] -> %d \n", arr[r]);
     int temp = arr[left];
     arr[left] = arr[r];
     arr[r] = temp;
-    printf("after swapping pivot -> %d \n", p);
-    printf("after swapping arr[r] -> %d \n", arr[r]);
     return r;
 }
 
@@ -37,8 +30,6 @@ void divide(int arr[], int left, int right)
     if (left < right)
     {
         int pivot = quickSort(arr, left, right);
-        printf("divide pivot -> %d \n", pivot);
-        printf("----------------------------- \n");
         divide(arr, left, pivot - 1);
         divide(arr, pivot + 1, right);
     }
